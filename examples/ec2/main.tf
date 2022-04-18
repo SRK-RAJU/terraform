@@ -16,7 +16,7 @@ resource "null_resource" "sample" {
   provisioner "remote-exec" {
     connection {
       host     = aws_instance.sample.*.public_ip[0]
-      user     = "ubuntu"
+      user     = "centos"
       password = "DevOps321"
     }
 
@@ -34,7 +34,7 @@ variable "env" {}
 
 data "aws_ami" "example" {
   most_recent = true
-  name_regex  = "^Ubuntu*"
+  name_regex  = "^Cent*"
   owners      = ["973714476881"]
 }
 
