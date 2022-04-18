@@ -2,7 +2,7 @@ resource "aws_spot_instance_request" "cheap_worker" {
   count                  = length(var.components)
   ami                    = data.aws_ami.ami.id
   instance_type          = "t3.micro"
-  vpc_security_group_ids = ["sg-0bcf4abee87c39a2d"]
+  vpc_security_group_ids = ["sg-0ff43ca729a6c7843"]
   wait_for_fulfillment   = true
   tags = {
     Name = element(var.components, count.index)
@@ -18,7 +18,7 @@ resource "aws_ec2_tag" "tags" {
 
 resource "aws_route53_record" "records" {
   count           = length(var.components)
-  zone_id         = "Z0577679A6W027W86RBE"
+  zone_id         = "Z034785541G9EV6BV8GL"
   name            = "${element(var.components, count.index)}-dev.roboshop.internal"
   type            = "A"
   ttl             = "300"
