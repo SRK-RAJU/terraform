@@ -39,7 +39,7 @@ resource "null_resource" "ansible" {
       "sudo yum install python3-pip -y",
       "sudo pip3 install pip --upgrade",
       "sudo pip3 install ansible",
-      "ansible-pull -U https://SUDDALARAJUKUMAR@dev.azure.com/SUDDALARAJUKUMAR/ROBOSHOP/_git/ansible roboshop-pull.yml -e ansible_user=raju ansible_password=frb3woctre3lpfjyuhxjsz432ogx5nbuvzokwhzagmcdkaml7w5q  -e COMPONENT=${element(var.components, count.index)} -e ENV=dev"
+      "ansible-pull -U https://SUDDALARAJUKUMAR@dev.azure.com/SUDDALARAJUKUMAR/ROBOSHOP/_git/ansible roboshop-pull.yml -e ansible_user=SUDDALARAJUKUMAR ansible_password=frb3woctre3lpfjyuhxjsz432ogx5nbuvzokwhzagmcdkaml7w5q  -e COMPONENT=${element(var.components, count.index)} -e ENV=dev"
     ]
   }
 }
