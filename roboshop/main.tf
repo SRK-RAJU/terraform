@@ -58,6 +58,6 @@ provider "aws" {
   region = "us-east-1"
 }
 
-locals {
-COMP_NAME = element(var.components, count.index)
-}
+#locals {
+#COMP_NAME = element(var.components, count.index)
+#}
